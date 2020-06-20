@@ -28,3 +28,10 @@ body{
     font-size: 20px;
 
 }
+
+.articleDiv {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: lightpink;
+    border-radius: 15px;
+}

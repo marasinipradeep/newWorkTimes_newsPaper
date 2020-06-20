@@ -9,7 +9,6 @@ var searchTerm = "";
 
 $("#searchButton").on("click", function () {
   
-  
   event.preventDefault();
   searchTerm = $("#searchTerm").val();
   console.log(searchTerm);
@@ -19,26 +18,38 @@ $("#searchButton").on("click", function () {
   
   endDate = $("#endYear").val();
   console.log(endDate);
+
+  var selectedNumber = $("#numberOfRecordsToRetrieve").val();
+  console.log(selectedNumber); 
   
   var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=" + beginDate + "&end_date=" + endDate + "&q=" + searchTerm + "&api-key=" + APIkey;
   console.log(queryURL);
   
-  function callAjax() {
+  
     $.ajax({
       url: queryURL,
       method: "GET"
     }).then(function (result) {
       console.log(result);
-      for (var i = 0; i < result.response.docs.length; i += 2) {
-  
-        var result = response.response.docs;
-        console.log(result);
-        //   var article = $("<div>");
+      
+      for (var i = 0; i < selectedNumber; i ++) {
+
+          var article = $("<div>");
+          
+          var title = $("<h3>");
+          title.text(i + ". " + result.response.docs[i].headline.main);
+
+          var author = $("<p>");
+          author.text(result.response.docs[i].byline.original);
+
+          var lineBreak = $("<hr>");
+          
+          article.append(title, author, lineBreak);
+          article.addClass("articleDiv");
+          $("#results").append(article);
       }
     });
-  }
   
-  callAjax();
 });
 
 
