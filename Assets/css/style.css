@@ -19,3 +19,12 @@ body{
 .row{
     margin: 10px;
 }
+
+#bottomfooter{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+
+}
