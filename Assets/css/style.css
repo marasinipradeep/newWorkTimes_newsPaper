@@ -1,0 +1,21 @@
+*{
+
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 5px;
+}
+
+#heading{
+    background: #20315A;
+    color: white;
+    text-align: center;
+}
+
+.row{
+    margin: 10px;
+}

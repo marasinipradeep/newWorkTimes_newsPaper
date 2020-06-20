@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New work Time Search</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- start of headings -->
+        <div class="jumbotron" id="heading">
+            <h1><strong><i class="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
+        </div>
+        <!-- End of headings -->
+
+
+        <!-- start of search body -->
+        <div class="row">
+            <div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>
+                                <i class="fa fa-list-alt"></i>
+                                " Search parameters"
+                            </strong>
+                        </h3>
+                    </div>
+
+
+                    <!-- start of forms -->
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="searchTerm">Search Term</label>
+                                <input type="text" class="form-control" id="searchTerm" aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="numberOfReocrdsToRetrieve">Number of Records to Retrieve:</label>
+                                <select class="form-control" id="numberOfReocrdsToRetrieve">
+                                    <option value="1">1</option>
+                                    <option value="5">5</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="startYear">Start Year (Optional):</label>
+                                <input type="text" class="form-control" id="startYear" aria-describedby="emailHelp">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="endYear">End Year (Optional):</label>
+                                <input type="text" class="form-control" id="endYear" aria-describedby="emailHelp">
+                            </div>
+                            <button class="btn btn-primary" id="searchButton">Search</button>
+                            <button class="btn btn-primary" id="clearButton">Clear Results</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./Assets/js/script.js"></script>
+</body>
+
+</html>
